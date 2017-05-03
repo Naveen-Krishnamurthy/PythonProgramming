@@ -1,0 +1,977 @@
+!SESSION 2017-04-30 12:50:08.615 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.osgi 2 0 2017-04-30 12:50:56.999
+!MESSAGE While loading class "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1", thread "Thread[Worker-1,5,main]" timed out waiting (5004ms) for thread "Thread[main,6,main]" to finish starting bundle "org.eclipse.egit.ui_4.6.1.201703071140-r [275]". To avoid deadlock, thread "Thread[Worker-1,5,main]" is proceeding but "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; type="osgi.bundle"; version:Version="4.6.1.201703071140-r"; osgi.identity="org.eclipse.egit.ui"; singleton:="true" [id=275] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:337)
+	at org.eclipse.osgi.container.Module.start(Module.java:401)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:470)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:325)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:423)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:372)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:364)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:161)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:334)
+	... 13 more
+Root exception:
+java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:334)
+	at org.eclipse.osgi.container.Module.start(Module.java:401)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:470)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:325)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:423)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:372)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:364)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:161)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.jface 2 0 2017-04-30 12:51:02.112
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-04-30 12:51:02.112
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@523362fc,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7e48cd92,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.python.pydev.shared_core 1 1 2017-04-30 12:52:14.657
+!MESSAGE Restoring info for: /usr/bin/python
+!STACK 0
+java.lang.RuntimeException: Restoring info for: /usr/bin/python
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.getInterpretersFromPersistedString(AbstractInterpreterManager.java:529)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.internalRecreateCacheGetInterpreterInfos(AbstractInterpreterManager.java:345)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.setInfos(AbstractInterpreterManager.java:655)
+	at org.python.pydev.ui.pythonpathconf.AutoConfigMaker$1.run(AutoConfigMaker.java:137)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.IOException: Expecting: /home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/.metadata/.plugins/org.python.pydev/v1_bm109oo8jsa5gnqmc06ekl12p/modulesKeys to exist (and be a file).
+	at org.python.pydev.editor.codecompletion.revisited.ModulesManager.loadFromFile(ModulesManager.java:293)
+	at org.python.pydev.editor.codecompletion.revisited.SystemModulesManager.load(SystemModulesManager.java:397)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.getInterpretersFromPersistedString(AbstractInterpreterManager.java:527)
+	... 4 more
+
+!ENTRY org.python.pydev.shared_core 1 1 2017-04-30 12:52:14.659
+!MESSAGE - Ok, file is non-null. Getting info on:/usr/bin/python
+- Beggining task:Getting libs totalWork:100
+- Setting task name:Mounting executable string...
+- Setting task name:Executing:  /usr/bin/python -u /home/ubuser/.p2/pool/plugins/org.python.pydev_5.7.0.201704111357/pysrc/interpreterInfo.py
+- Setting task name:Making pythonpath environment... /usr/bin/python -u /home/ubuser/.p2/pool/plugins/org.python.pydev_5.7.0.201704111357/pysrc/interpreterInfo.py
+- Setting task name:Making exec... /usr/bin/python -u /home/ubuser/.p2/pool/plugins/org.python.pydev_5.7.0.201704111357/pysrc/interpreterInfo.py
+- Setting task name:Reading output...
+- Setting task name:Waiting for process to finish.
+- Success getting the info. Result:<xml>
+<name>python</name>
+<version>2.7</version>
+<executable>/usr/bin/python</executable>
+<lib>/usr/lib/python2.7</lib>
+<lib>/usr/lib/python2.7/plat-x86_64-linux-gnu</lib>
+<lib>/usr/lib/python2.7/lib-tk</lib>
+<lib>/usr/lib/python2.7/lib-dynload</lib>
+<lib>/usr/local/lib/python2.7/dist-packages</lib>
+<lib>/usr/lib/python2.7/dist-packages</lib>
+<forced_lib>Image</forced_lib>
+<forced_lib>OpenGL</forced_lib>
+<forced_lib>__builtin__</forced_lib>
+<forced_lib>__main__</forced_lib>
+<forced_lib>_ast</forced_lib>
+<forced_lib>_bisect</forced_lib>
+<forced_lib>_bytesio</forced_lib>
+<forced_lib>_codecs</forced_lib>
+<forced_lib>_codecs_cn</forced_lib>
+<forced_lib>_codecs_hk</forced_lib>
+<forced_lib>_codecs_iso2022</forced_lib>
+<forced_lib>_codecs_jp</forced_lib>
+<forced_lib>_codecs_kr</forced_lib>
+<forced_lib>_codecs_tw</forced_lib>
+<forced_lib>_collections</forced_lib>
+<forced_lib>_csv</forced_lib>
+<forced_lib>_fileio</forced_lib>
+<forced_lib>_functools</forced_lib>
+<forced_lib>_heapq</forced_lib>
+<forced_lib>_hotshot</forced_lib>
+<forced_lib>_io</forced_lib>
+<forced_lib>_json</forced_lib>
+<forced_lib>_locale</forced_lib>
+<forced_lib>_lsprof</forced_lib>
+<forced_lib>_md5</forced_lib>
+<forced_lib>_multibytecodec</forced_lib>
+<forced_lib>_random</forced_lib>
+<forced_lib>_sha</forced_lib>
+<forced_lib>_sha256</forced_lib>
+<forced_lib>_sha512</forced_lib>
+<forced_lib>_socket</forced_lib>
+<forced_lib>_sre</forced_lib>
+<forced_lib>_struct</forced_lib>
+<forced_lib>_subprocess</forced_lib>
+<forced_lib>_symtable</forced_lib>
+<forced_lib>_warnings</forced_lib>
+<forced_lib>_weakref</forced_lib>
+<forced_lib>_winreg</forced_lib>
+<forced_lib>array</forced_lib>
+<forced_lib>audioop</forced_lib>
+<forced_lib>binascii</forced_lib>
+<forced_lib>cPickle</forced_lib>
+<forced_lib>cStringIO</forced_lib>
+<forced_lib>cmath</forced_lib>
+<forced_lib>datetime</forced_lib>
+<forced_lib>email</forced_lib>
+<forced_lib>errno</forced_lib>
+<forced_lib>exceptions</forced_lib>
+<forced_lib>fcntl</forced_lib>
+<forced_lib>future_builtins</forced_lib>
+<forced_lib>gc</forced_lib>
+<forced_lib>gi</forced_lib>
+<forced_lib>grp</forced_lib>
+<forced_lib>hashlib</forced_lib>
+<forced_lib>imageop</forced_lib>
+<forced_lib>imp</forced_lib>
+<forced_lib>itertools</forced_lib>
+<forced_lib>marshal</forced_lib>
+<forced_lib>math</forced_lib>
+<forced_lib>mmap</forced_lib>
+<forced_lib>mock</forced_lib>
+<forced_lib>msvcrt</forced_lib>
+<forced_lib>multiprocessing</forced_lib>
+<forced_lib>nt</forced_lib>
+<forced_lib>numpy</forced_lib>
+<forced_lib>operator</forced_lib>
+<forced_lib>os</forced_lib>
+<forced_lib>os.path</forced_lib>
+<forced_lib>parser</forced_lib>
+<forced_lib>posix</forced_lib>
+<forced_lib>pwd</forced_lib>
+<forced_lib>pytest</forced_lib>
+<forced_lib>scipy</forced_lib>
+<forced_lib>select</forced_lib>
+<forced_lib>signal</forced_lib>
+<forced_lib>socket</forced_lib>
+<forced_lib>spwd</forced_lib>
+<forced_lib>ssl</forced_lib>
+<forced_lib>strop</forced_lib>
+<forced_lib>sys</forced_lib>
+<forced_lib>syslog</forced_lib>
+<forced_lib>thread</forced_lib>
+<forced_lib>time</forced_lib>
+<forced_lib>unicodedata</forced_lib>
+<forced_lib>wx</forced_lib>
+<forced_lib>wxPython</forced_lib>
+<forced_lib>xxsubtype</forced_lib>
+<forced_lib>zipimport</forced_lib>
+<forced_lib>zlib</forced_lib>
+</xml>
+
+!STACK 0
+java.lang.RuntimeException: - Ok, file is non-null. Getting info on:/usr/bin/python
+- Beggining task:Getting libs totalWork:100
+- Setting task name:Mounting executable string...
+- Setting task name:Executing:  /usr/bin/python -u /home/ubuser/.p2/pool/plugins/org.python.pydev_5.7.0.201704111357/pysrc/interpreterInfo.py
+- Setting task name:Making pythonpath environment... /usr/bin/python -u /home/ubuser/.p2/pool/plugins/org.python.pydev_5.7.0.201704111357/pysrc/interpreterInfo.py
+- Setting task name:Making exec... /usr/bin/python -u /home/ubuser/.p2/pool/plugins/org.python.pydev_5.7.0.201704111357/pysrc/interpreterInfo.py
+- Setting task name:Reading output...
+- Setting task name:Waiting for process to finish.
+- Success getting the info. Result:<xml>
+<name>python</name>
+<version>2.7</version>
+<executable>/usr/bin/python</executable>
+<lib>/usr/lib/python2.7</lib>
+<lib>/usr/lib/python2.7/plat-x86_64-linux-gnu</lib>
+<lib>/usr/lib/python2.7/lib-tk</lib>
+<lib>/usr/lib/python2.7/lib-dynload</lib>
+<lib>/usr/local/lib/python2.7/dist-packages</lib>
+<lib>/usr/lib/python2.7/dist-packages</lib>
+<forced_lib>Image</forced_lib>
+<forced_lib>OpenGL</forced_lib>
+<forced_lib>__builtin__</forced_lib>
+<forced_lib>__main__</forced_lib>
+<forced_lib>_ast</forced_lib>
+<forced_lib>_bisect</forced_lib>
+<forced_lib>_bytesio</forced_lib>
+<forced_lib>_codecs</forced_lib>
+<forced_lib>_codecs_cn</forced_lib>
+<forced_lib>_codecs_hk</forced_lib>
+<forced_lib>_codecs_iso2022</forced_lib>
+<forced_lib>_codecs_jp</forced_lib>
+<forced_lib>_codecs_kr</forced_lib>
+<forced_lib>_codecs_tw</forced_lib>
+<forced_lib>_collections</forced_lib>
+<forced_lib>_csv</forced_lib>
+<forced_lib>_fileio</forced_lib>
+<forced_lib>_functools</forced_lib>
+<forced_lib>_heapq</forced_lib>
+<forced_lib>_hotshot</forced_lib>
+<forced_lib>_io</forced_lib>
+<forced_lib>_json</forced_lib>
+<forced_lib>_locale</forced_lib>
+<forced_lib>_lsprof</forced_lib>
+<forced_lib>_md5</forced_lib>
+<forced_lib>_multibytecodec</forced_lib>
+<forced_lib>_random</forced_lib>
+<forced_lib>_sha</forced_lib>
+<forced_lib>_sha256</forced_lib>
+<forced_lib>_sha512</forced_lib>
+<forced_lib>_socket</forced_lib>
+<forced_lib>_sre</forced_lib>
+<forced_lib>_struct</forced_lib>
+<forced_lib>_subprocess</forced_lib>
+<forced_lib>_symtable</forced_lib>
+<forced_lib>_warnings</forced_lib>
+<forced_lib>_weakref</forced_lib>
+<forced_lib>_winreg</forced_lib>
+<forced_lib>array</forced_lib>
+<forced_lib>audioop</forced_lib>
+<forced_lib>binascii</forced_lib>
+<forced_lib>cPickle</forced_lib>
+<forced_lib>cStringIO</forced_lib>
+<forced_lib>cmath</forced_lib>
+<forced_lib>datetime</forced_lib>
+<forced_lib>email</forced_lib>
+<forced_lib>errno</forced_lib>
+<forced_lib>exceptions</forced_lib>
+<forced_lib>fcntl</forced_lib>
+<forced_lib>future_builtins</forced_lib>
+<forced_lib>gc</forced_lib>
+<forced_lib>gi</forced_lib>
+<forced_lib>grp</forced_lib>
+<forced_lib>hashlib</forced_lib>
+<forced_lib>imageop</forced_lib>
+<forced_lib>imp</forced_lib>
+<forced_lib>itertools</forced_lib>
+<forced_lib>marshal</forced_lib>
+<forced_lib>math</forced_lib>
+<forced_lib>mmap</forced_lib>
+<forced_lib>mock</forced_lib>
+<forced_lib>msvcrt</forced_lib>
+<forced_lib>multiprocessing</forced_lib>
+<forced_lib>nt</forced_lib>
+<forced_lib>numpy</forced_lib>
+<forced_lib>operator</forced_lib>
+<forced_lib>os</forced_lib>
+<forced_lib>os.path</forced_lib>
+<forced_lib>parser</forced_lib>
+<forced_lib>posix</forced_lib>
+<forced_lib>pwd</forced_lib>
+<forced_lib>pytest</forced_lib>
+<forced_lib>scipy</forced_lib>
+<forced_lib>select</forced_lib>
+<forced_lib>signal</forced_lib>
+<forced_lib>socket</forced_lib>
+<forced_lib>spwd</forced_lib>
+<forced_lib>ssl</forced_lib>
+<forced_lib>strop</forced_lib>
+<forced_lib>sys</forced_lib>
+<forced_lib>syslog</forced_lib>
+<forced_lib>thread</forced_lib>
+<forced_lib>time</forced_lib>
+<forced_lib>unicodedata</forced_lib>
+<forced_lib>wx</forced_lib>
+<forced_lib>wxPython</forced_lib>
+<forced_lib>xxsubtype</forced_lib>
+<forced_lib>zipimport</forced_lib>
+<forced_lib>zlib</forced_lib>
+</xml>
+
+	at org.python.pydev.core.log.Log.logInfo(Log.java:66)
+	at org.python.pydev.ui.pythonpathconf.AutoConfigMaker.autoConfigSingleApply(AutoConfigMaker.java:177)
+	at org.python.pydev.ui.PyProjectPythonDetails$ProjectInterpreterAndGrammarConfig$2.widgetSelected(PyProjectPythonDetails.java:289)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5227)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1340)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1366)
+	at org.eclipse.swt.widgets.Widget.sendSelectionEvent(Widget.java:1480)
+	at org.eclipse.swt.widgets.Link.gtk_button_release_event(Link.java:384)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1980)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5827)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5498)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:9545)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1275)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2495)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4149)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:818)
+	at org.eclipse.jface.window.Window.open(Window.java:794)
+	at org.eclipse.ui.actions.NewProjectAction.run(NewProjectAction.java:115)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:473)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:565)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:397)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5227)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1340)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4561)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4151)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1492)
+
+!ENTRY org.python.pydev.shared_core 1 1 2017-04-30 12:52:14.859
+!MESSAGE Finished restoring information for: /usr/bin/python at: /home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/.metadata/.plugins/org.python.pydev/v1_bm109oo8jsa5gnqmc06ekl12p
+!STACK 0
+java.lang.RuntimeException: Finished restoring information for: /usr/bin/python at: /home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/.metadata/.plugins/org.python.pydev/v1_bm109oo8jsa5gnqmc06ekl12p
+	at org.python.pydev.core.log.Log.logInfo(Log.java:66)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.getInterpretersFromPersistedString(AbstractInterpreterManager.java:574)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.internalRecreateCacheGetInterpreterInfos(AbstractInterpreterManager.java:345)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.setInfos(AbstractInterpreterManager.java:655)
+	at org.python.pydev.ui.pythonpathconf.AutoConfigMaker$1.run(AutoConfigMaker.java:137)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-04-30 12:52:14.915
+!MESSAGE Info: Rebuilding internal caches: /home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/.metadata/.plugins/com.python.pydev.analysis/python_v1_bm109oo8jsa5gnqmc06ekl12p/python.pydevsysteminfo (Expected error to be provided and got no error!)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-04-30 12:52:18.243
+!MESSAGE Info: Rebuilding internal caches: /home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/BasicsPython/com.python.pydev.analysis/AdditionalProjectInterpreterInfo.pydevinfo (Expected error to be provided and got no error!)
+
+!ENTRY org.eclipse.core.expressions 4 201 2017-04-30 12:54:31.710
+!MESSAGE No property tester contributes a property org.eclipse.wst.jsdt.chromium.debug.core.isJsFile to type class org.python.pydev.navigator.elements.PythonFile
+!STACK 1
+org.eclipse.core.runtime.CoreException: No property tester contributes a property org.eclipse.wst.jsdt.chromium.debug.core.isJsFile to type class org.python.pydev.navigator.elements.PythonFile
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:127)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:97)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AndExpression.evaluate(AndExpression.java:31)
+	at org.eclipse.ui.internal.dialogs.RegistryPageContributor.failsEnablement(RegistryPageContributor.java:306)
+	at org.eclipse.ui.internal.dialogs.RegistryPageContributor.isApplicableTo(RegistryPageContributor.java:248)
+	at org.eclipse.ui.internal.dialogs.PropertyPageContributorManager.getApplicableContributors(PropertyPageContributorManager.java:216)
+	at org.eclipse.ui.internal.dialogs.PropertyPageContributorManager.getApplicableContributors(PropertyPageContributorManager.java:235)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.hasPropertyPagesFor(PropertyDialogAction.java:106)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.isApplicableForSelection(PropertyDialogAction.java:148)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.isApplicableForSelection(PropertyDialogAction.java:128)
+	at org.eclipse.ui.internal.navigator.resources.actions.PropertiesActionProvider.fillContextMenu(PropertiesActionProvider.java:63)
+	at org.eclipse.ui.navigator.NavigatorActionService$2.run(NavigatorActionService.java:225)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.navigator.NavigatorActionService.addCommonActionProviderMenu(NavigatorActionService.java:219)
+	at org.eclipse.ui.navigator.NavigatorActionService.fillContextMenu(NavigatorActionService.java:174)
+	at org.eclipse.ui.navigator.CommonNavigatorManager.fillContextMenu(CommonNavigatorManager.java:267)
+	at org.eclipse.ui.navigator.CommonNavigatorManager$3.menuAboutToShow(CommonNavigatorManager.java:283)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:339)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:470)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:465)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:497)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:256)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5227)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1340)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1366)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1345)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:198)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4603)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4141)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1492)
+!SUBENTRY 1 org.eclipse.core.expressions 4 201 2017-04-30 12:54:31.711
+!MESSAGE No property tester contributes a property org.eclipse.wst.jsdt.chromium.debug.core.isJsFile to type class org.python.pydev.navigator.elements.PythonFile
+
+!ENTRY org.eclipse.jface.text 2 0 2017-04-30 12:58:45.223
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-04-30 12:58:45.223
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.core.expressions 4 201 2017-04-30 12:59:05.752
+!MESSAGE No property tester contributes a property org.eclipse.wst.jsdt.chromium.debug.core.isJsFile to type class org.python.pydev.navigator.elements.PythonFile
+!STACK 1
+org.eclipse.core.runtime.CoreException: No property tester contributes a property org.eclipse.wst.jsdt.chromium.debug.core.isJsFile to type class org.python.pydev.navigator.elements.PythonFile
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:127)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:97)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AndExpression.evaluate(AndExpression.java:31)
+	at org.eclipse.ui.internal.dialogs.RegistryPageContributor.failsEnablement(RegistryPageContributor.java:306)
+	at org.eclipse.ui.internal.dialogs.RegistryPageContributor.isApplicableTo(RegistryPageContributor.java:248)
+	at org.eclipse.ui.internal.dialogs.PropertyPageContributorManager.getApplicableContributors(PropertyPageContributorManager.java:216)
+	at org.eclipse.ui.internal.dialogs.PropertyPageContributorManager.getApplicableContributors(PropertyPageContributorManager.java:235)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.hasPropertyPagesFor(PropertyDialogAction.java:106)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.isApplicableForSelection(PropertyDialogAction.java:148)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.isApplicableForSelection(PropertyDialogAction.java:128)
+	at org.eclipse.ui.internal.navigator.resources.actions.PropertiesActionProvider.fillContextMenu(PropertiesActionProvider.java:63)
+	at org.eclipse.ui.navigator.NavigatorActionService$2.run(NavigatorActionService.java:225)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.navigator.NavigatorActionService.addCommonActionProviderMenu(NavigatorActionService.java:219)
+	at org.eclipse.ui.navigator.NavigatorActionService.fillContextMenu(NavigatorActionService.java:174)
+	at org.eclipse.ui.navigator.CommonNavigatorManager.fillContextMenu(CommonNavigatorManager.java:267)
+	at org.eclipse.ui.navigator.CommonNavigatorManager$3.menuAboutToShow(CommonNavigatorManager.java:283)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:339)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:470)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:465)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:497)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:256)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5227)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1340)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1366)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1345)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:198)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4603)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4141)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1492)
+!SUBENTRY 1 org.eclipse.core.expressions 4 201 2017-04-30 12:59:05.753
+!MESSAGE No property tester contributes a property org.eclipse.wst.jsdt.chromium.debug.core.isJsFile to type class org.python.pydev.navigator.elements.PythonFile
+
+!ENTRY org.eclipse.core.expressions 4 201 2017-04-30 12:59:27.595
+!MESSAGE No property tester contributes a property org.eclipse.wst.jsdt.chromium.debug.core.isJsFile to type class org.python.pydev.navigator.elements.PythonFile
+!STACK 1
+org.eclipse.core.runtime.CoreException: No property tester contributes a property org.eclipse.wst.jsdt.chromium.debug.core.isJsFile to type class org.python.pydev.navigator.elements.PythonFile
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:127)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:97)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AndExpression.evaluate(AndExpression.java:31)
+	at org.eclipse.ui.internal.dialogs.RegistryPageContributor.failsEnablement(RegistryPageContributor.java:306)
+	at org.eclipse.ui.internal.dialogs.RegistryPageContributor.isApplicableTo(RegistryPageContributor.java:248)
+	at org.eclipse.ui.internal.dialogs.PropertyPageContributorManager.getApplicableContributors(PropertyPageContributorManager.java:216)
+	at org.eclipse.ui.internal.dialogs.PropertyPageContributorManager.getApplicableContributors(PropertyPageContributorManager.java:235)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.hasPropertyPagesFor(PropertyDialogAction.java:106)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.isApplicableForSelection(PropertyDialogAction.java:148)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.isApplicableForSelection(PropertyDialogAction.java:128)
+	at org.eclipse.ui.internal.navigator.resources.actions.PropertiesActionProvider.fillContextMenu(PropertiesActionProvider.java:63)
+	at org.eclipse.ui.navigator.NavigatorActionService$2.run(NavigatorActionService.java:225)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.navigator.NavigatorActionService.addCommonActionProviderMenu(NavigatorActionService.java:219)
+	at org.eclipse.ui.navigator.NavigatorActionService.fillContextMenu(NavigatorActionService.java:174)
+	at org.eclipse.ui.navigator.CommonNavigatorManager.fillContextMenu(CommonNavigatorManager.java:267)
+	at org.eclipse.ui.navigator.CommonNavigatorManager$3.menuAboutToShow(CommonNavigatorManager.java:283)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:339)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:470)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:465)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:497)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:256)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5227)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1340)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1366)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1345)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:198)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4603)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4141)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1492)
+!SUBENTRY 1 org.eclipse.core.expressions 4 201 2017-04-30 12:59:27.598
+!MESSAGE No property tester contributes a property org.eclipse.wst.jsdt.chromium.debug.core.isJsFile to type class org.python.pydev.navigator.elements.PythonFile
+!SESSION 2017-05-03 21:52:28.258 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-05-03 21:53:27.745
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.osgi 2 0 2017-05-03 21:53:48.537
+!MESSAGE While loading class "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1", thread "Thread[Worker-2,5,main]" timed out waiting (5003ms) for thread "Thread[main,6,main]" to finish starting bundle "org.eclipse.egit.ui_4.6.1.201703071140-r [275]". To avoid deadlock, thread "Thread[Worker-2,5,main]" is proceeding but "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; type="osgi.bundle"; version:Version="4.6.1.201703071140-r"; osgi.identity="org.eclipse.egit.ui"; singleton:="true" [id=275] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:337)
+	at org.eclipse.osgi.container.Module.start(Module.java:401)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:470)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:325)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:423)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:372)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:364)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:161)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:334)
+	... 13 more
+Root exception:
+java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:334)
+	at org.eclipse.osgi.container.Module.start(Module.java:401)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:470)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:325)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:423)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:372)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:364)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:161)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.jface 2 0 2017-05-03 21:54:04.963
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-05-03 21:54:04.963
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@28da9008,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7ddbc6da,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.jface.text 2 0 2017-05-03 22:01:47.957
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-05-03 22:01:47.967
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.python.pydev.shared_core 1 1 2017-05-03 23:00:19.139
+!MESSAGE Information about process of adding new interpreter:
+- Opening dialog to request executable (or jar).
+- Chosen interpreter (name and file):'Tuple [python3 -- /usr/bin/python3]
+- Ok, file is non-null. Getting info on:/usr/bin/python3
+- Beggining task:Getting libs totalWork:100
+- Setting task name:Mounting executable string...
+- Setting task name:Executing:  /usr/bin/python3 -u /home/ubuser/.p2/pool/plugins/org.python.pydev_5.7.0.201704111357/pysrc/interpreterInfo.py
+- Setting task name:Making pythonpath environment... /usr/bin/python3 -u /home/ubuser/.p2/pool/plugins/org.python.pydev_5.7.0.201704111357/pysrc/interpreterInfo.py
+- Setting task name:Making exec... /usr/bin/python3 -u /home/ubuser/.p2/pool/plugins/org.python.pydev_5.7.0.201704111357/pysrc/interpreterInfo.py
+- Setting task name:Reading output...
+- Setting task name:Waiting for process to finish.
+- Success getting the info. Result:<xml>
+<name>python3</name>
+<version>3.5</version>
+<executable>/usr/bin/python3</executable>
+<lib>/usr/lib/python3.5</lib>
+<lib>/usr/lib/python3.5/plat-x86_64-linux-gnu</lib>
+<lib>/usr/lib/python3.5/lib-dynload</lib>
+<lib>/usr/local/lib/python3.5/dist-packages</lib>
+<lib>/usr/lib/python3/dist-packages</lib>
+<forced_lib>Image</forced_lib>
+<forced_lib>OpenGL</forced_lib>
+<forced_lib>_ast</forced_lib>
+<forced_lib>_bisect</forced_lib>
+<forced_lib>_bytesio</forced_lib>
+<forced_lib>_codecs</forced_lib>
+<forced_lib>_codecs_cn</forced_lib>
+<forced_lib>_codecs_hk</forced_lib>
+<forced_lib>_codecs_iso2022</forced_lib>
+<forced_lib>_codecs_jp</forced_lib>
+<forced_lib>_codecs_kr</forced_lib>
+<forced_lib>_codecs_tw</forced_lib>
+<forced_lib>_collections</forced_lib>
+<forced_lib>_csv</forced_lib>
+<forced_lib>_datetime</forced_lib>
+<forced_lib>_elementtree</forced_lib>
+<forced_lib>_fileio</forced_lib>
+<forced_lib>_functools</forced_lib>
+<forced_lib>_heapq</forced_lib>
+<forced_lib>_hotshot</forced_lib>
+<forced_lib>_imp</forced_lib>
+<forced_lib>_io</forced_lib>
+<forced_lib>_json</forced_lib>
+<forced_lib>_locale</forced_lib>
+<forced_lib>_lsprof</forced_lib>
+<forced_lib>_md5</forced_lib>
+<forced_lib>_multibytecodec</forced_lib>
+<forced_lib>_operator</forced_lib>
+<forced_lib>_pickle</forced_lib>
+<forced_lib>_posixsubprocess</forced_lib>
+<forced_lib>_random</forced_lib>
+<forced_lib>_sha</forced_lib>
+<forced_lib>_sha1</forced_lib>
+<forced_lib>_sha256</forced_lib>
+<forced_lib>_sha512</forced_lib>
+<forced_lib>_signal</forced_lib>
+<forced_lib>_socket</forced_lib>
+<forced_lib>_sre</forced_lib>
+<forced_lib>_stat</forced_lib>
+<forced_lib>_string</forced_lib>
+<forced_lib>_struct</forced_lib>
+<forced_lib>_subprocess</forced_lib>
+<forced_lib>_symtable</forced_lib>
+<forced_lib>_thread</forced_lib>
+<forced_lib>_tracemalloc</forced_lib>
+<forced_lib>_warnings</forced_lib>
+<forced_lib>_weakref</forced_lib>
+<forced_lib>_winreg</forced_lib>
+<forced_lib>array</forced_lib>
+<forced_lib>atexit</forced_lib>
+<forced_lib>audioop</forced_lib>
+<forced_lib>binascii</forced_lib>
+<forced_lib>builtins</forced_lib>
+<forced_lib>cPickle</forced_lib>
+<forced_lib>cStringIO</forced_lib>
+<forced_lib>cmath</forced_lib>
+<forced_lib>datetime</forced_lib>
+<forced_lib>email</forced_lib>
+<forced_lib>errno</forced_lib>
+<forced_lib>exceptions</forced_lib>
+<forced_lib>faulthandler</forced_lib>
+<forced_lib>fcntl</forced_lib>
+<forced_lib>future_builtins</forced_lib>
+<forced_lib>gc</forced_lib>
+<forced_lib>gi</forced_lib>
+<forced_lib>grp</forced_lib>
+<forced_lib>hashlib</forced_lib>
+<forced_lib>imageop</forced_lib>
+<forced_lib>imp</forced_lib>
+<forced_lib>itertools</forced_lib>
+<forced_lib>marshal</forced_lib>
+<forced_lib>math</forced_lib>
+<forced_lib>mmap</forced_lib>
+<forced_lib>mock</forced_lib>
+<forced_lib>msvcrt</forced_lib>
+<forced_lib>multiprocessing</forced_lib>
+<forced_lib>nt</forced_lib>
+<forced_lib>numpy</forced_lib>
+<forced_lib>operator</forced_lib>
+<forced_lib>os</forced_lib>
+<forced_lib>os.path</forced_lib>
+<forced_lib>parser</forced_lib>
+<forced_lib>posix</forced_lib>
+<forced_lib>pwd</forced_lib>
+<forced_lib>pyexpat</forced_lib>
+<forced_lib>pytest</forced_lib>
+<forced_lib>scipy</forced_lib>
+<forced_lib>select</forced_lib>
+<forced_lib>signal</forced_lib>
+<forced_lib>socket</forced_lib>
+<forced_lib>spwd</forced_lib>
+<forced_lib>ssl</forced_lib>
+<forced_lib>strop</forced_lib>
+<forced_lib>sys</forced_lib>
+<forced_lib>syslog</forced_lib>
+<forced_lib>thread</forced_lib>
+<forced_lib>time</forced_lib>
+<forced_lib>unicodedata</forced_lib>
+<forced_lib>wx</forced_lib>
+<forced_lib>wxPython</forced_lib>
+<forced_lib>xxsubtype</forced_lib>
+<forced_lib>zipimport</forced_lib>
+<forced_lib>zlib</forced_lib>
+</xml>
+
+!STACK 0
+java.lang.RuntimeException: Information about process of adding new interpreter:
+- Opening dialog to request executable (or jar).
+- Chosen interpreter (name and file):'Tuple [python3 -- /usr/bin/python3]
+- Ok, file is non-null. Getting info on:/usr/bin/python3
+- Beggining task:Getting libs totalWork:100
+- Setting task name:Mounting executable string...
+- Setting task name:Executing:  /usr/bin/python3 -u /home/ubuser/.p2/pool/plugins/org.python.pydev_5.7.0.201704111357/pysrc/interpreterInfo.py
+- Setting task name:Making pythonpath environment... /usr/bin/python3 -u /home/ubuser/.p2/pool/plugins/org.python.pydev_5.7.0.201704111357/pysrc/interpreterInfo.py
+- Setting task name:Making exec... /usr/bin/python3 -u /home/ubuser/.p2/pool/plugins/org.python.pydev_5.7.0.201704111357/pysrc/interpreterInfo.py
+- Setting task name:Reading output...
+- Setting task name:Waiting for process to finish.
+- Success getting the info. Result:<xml>
+<name>python3</name>
+<version>3.5</version>
+<executable>/usr/bin/python3</executable>
+<lib>/usr/lib/python3.5</lib>
+<lib>/usr/lib/python3.5/plat-x86_64-linux-gnu</lib>
+<lib>/usr/lib/python3.5/lib-dynload</lib>
+<lib>/usr/local/lib/python3.5/dist-packages</lib>
+<lib>/usr/lib/python3/dist-packages</lib>
+<forced_lib>Image</forced_lib>
+<forced_lib>OpenGL</forced_lib>
+<forced_lib>_ast</forced_lib>
+<forced_lib>_bisect</forced_lib>
+<forced_lib>_bytesio</forced_lib>
+<forced_lib>_codecs</forced_lib>
+<forced_lib>_codecs_cn</forced_lib>
+<forced_lib>_codecs_hk</forced_lib>
+<forced_lib>_codecs_iso2022</forced_lib>
+<forced_lib>_codecs_jp</forced_lib>
+<forced_lib>_codecs_kr</forced_lib>
+<forced_lib>_codecs_tw</forced_lib>
+<forced_lib>_collections</forced_lib>
+<forced_lib>_csv</forced_lib>
+<forced_lib>_datetime</forced_lib>
+<forced_lib>_elementtree</forced_lib>
+<forced_lib>_fileio</forced_lib>
+<forced_lib>_functools</forced_lib>
+<forced_lib>_heapq</forced_lib>
+<forced_lib>_hotshot</forced_lib>
+<forced_lib>_imp</forced_lib>
+<forced_lib>_io</forced_lib>
+<forced_lib>_json</forced_lib>
+<forced_lib>_locale</forced_lib>
+<forced_lib>_lsprof</forced_lib>
+<forced_lib>_md5</forced_lib>
+<forced_lib>_multibytecodec</forced_lib>
+<forced_lib>_operator</forced_lib>
+<forced_lib>_pickle</forced_lib>
+<forced_lib>_posixsubprocess</forced_lib>
+<forced_lib>_random</forced_lib>
+<forced_lib>_sha</forced_lib>
+<forced_lib>_sha1</forced_lib>
+<forced_lib>_sha256</forced_lib>
+<forced_lib>_sha512</forced_lib>
+<forced_lib>_signal</forced_lib>
+<forced_lib>_socket</forced_lib>
+<forced_lib>_sre</forced_lib>
+<forced_lib>_stat</forced_lib>
+<forced_lib>_string</forced_lib>
+<forced_lib>_struct</forced_lib>
+<forced_lib>_subprocess</forced_lib>
+<forced_lib>_symtable</forced_lib>
+<forced_lib>_thread</forced_lib>
+<forced_lib>_tracemalloc</forced_lib>
+<forced_lib>_warnings</forced_lib>
+<forced_lib>_weakref</forced_lib>
+<forced_lib>_winreg</forced_lib>
+<forced_lib>array</forced_lib>
+<forced_lib>atexit</forced_lib>
+<forced_lib>audioop</forced_lib>
+<forced_lib>binascii</forced_lib>
+<forced_lib>builtins</forced_lib>
+<forced_lib>cPickle</forced_lib>
+<forced_lib>cStringIO</forced_lib>
+<forced_lib>cmath</forced_lib>
+<forced_lib>datetime</forced_lib>
+<forced_lib>email</forced_lib>
+<forced_lib>errno</forced_lib>
+<forced_lib>exceptions</forced_lib>
+<forced_lib>faulthandler</forced_lib>
+<forced_lib>fcntl</forced_lib>
+<forced_lib>future_builtins</forced_lib>
+<forced_lib>gc</forced_lib>
+<forced_lib>gi</forced_lib>
+<forced_lib>grp</forced_lib>
+<forced_lib>hashlib</forced_lib>
+<forced_lib>imageop</forced_lib>
+<forced_lib>imp</forced_lib>
+<forced_lib>itertools</forced_lib>
+<forced_lib>marshal</forced_lib>
+<forced_lib>math</forced_lib>
+<forced_lib>mmap</forced_lib>
+<forced_lib>mock</forced_lib>
+<forced_lib>msvcrt</forced_lib>
+<forced_lib>multiprocessing</forced_lib>
+<forced_lib>nt</forced_lib>
+<forced_lib>numpy</forced_lib>
+<forced_lib>operator</forced_lib>
+<forced_lib>os</forced_lib>
+<forced_lib>os.path</forced_lib>
+<forced_lib>parser</forced_lib>
+<forced_lib>posix</forced_lib>
+<forced_lib>pwd</forced_lib>
+<forced_lib>pyexpat</forced_lib>
+<forced_lib>pytest</forced_lib>
+<forced_lib>scipy</forced_lib>
+<forced_lib>select</forced_lib>
+<forced_lib>signal</forced_lib>
+<forced_lib>socket</forced_lib>
+<forced_lib>spwd</forced_lib>
+<forced_lib>ssl</forced_lib>
+<forced_lib>strop</forced_lib>
+<forced_lib>sys</forced_lib>
+<forced_lib>syslog</forced_lib>
+<forced_lib>thread</forced_lib>
+<forced_lib>time</forced_lib>
+<forced_lib>unicodedata</forced_lib>
+<forced_lib>wx</forced_lib>
+<forced_lib>wxPython</forced_lib>
+<forced_lib>xxsubtype</forced_lib>
+<forced_lib>zipimport</forced_lib>
+<forced_lib>zlib</forced_lib>
+</xml>
+
+	at org.python.pydev.core.log.Log.logInfo(Log.java:66)
+	at org.python.pydev.ui.pythonpathconf.AbstractInterpreterEditor.getNewInputObject(AbstractInterpreterEditor.java:990)
+	at org.python.copiedfromeclipsesrc.PythonListEditor.addPressed(PythonListEditor.java:132)
+	at org.python.copiedfromeclipsesrc.PythonListEditor$1.widgetSelected(PythonListEditor.java:225)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5227)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1340)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4561)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4151)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:818)
+	at org.eclipse.jface.window.Window.open(Window.java:794)
+	at org.eclipse.ui.internal.dialogs.WorkbenchPreferenceDialog.open(WorkbenchPreferenceDialog.java:211)
+	at org.python.pydev.ui.PyProjectPythonDetails$ProjectInterpreterAndGrammarConfig$2.widgetSelected(PyProjectPythonDetails.java:244)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5227)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1340)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1366)
+	at org.eclipse.swt.widgets.Widget.sendSelectionEvent(Widget.java:1480)
+	at org.eclipse.swt.widgets.Link.gtk_button_release_event(Link.java:384)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1980)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5827)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5498)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:9545)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1275)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2495)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4149)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:818)
+	at org.eclipse.jface.window.Window.open(Window.java:794)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.run(PropertyDialogAction.java:157)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:473)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:565)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:397)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5227)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1340)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4561)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4151)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1492)
+
+!ENTRY org.python.pydev.shared_core 1 1 2017-05-03 23:00:23.488
+!MESSAGE Restoring info for: /usr/bin/python3
+!STACK 0
+java.lang.RuntimeException: Restoring info for: /usr/bin/python3
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.getInterpretersFromPersistedString(AbstractInterpreterManager.java:529)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.internalRecreateCacheGetInterpreterInfos(AbstractInterpreterManager.java:345)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.setInfos(AbstractInterpreterManager.java:655)
+	at org.python.pydev.ui.pythonpathconf.AbstractInterpreterPreferencesPage$5.run(AbstractInterpreterPreferencesPage.java:282)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: java.io.IOException: Expecting: /home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/.metadata/.plugins/org.python.pydev/v1_eqo8on6m6qtijnz6835bycxw5/modulesKeys to exist (and be a file).
+	at org.python.pydev.editor.codecompletion.revisited.ModulesManager.loadFromFile(ModulesManager.java:293)
+	at org.python.pydev.editor.codecompletion.revisited.SystemModulesManager.load(SystemModulesManager.java:397)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.getInterpretersFromPersistedString(AbstractInterpreterManager.java:527)
+	... 4 more
+
+!ENTRY org.python.pydev.shared_core 1 1 2017-05-03 23:00:23.976
+!MESSAGE Finished restoring information for: /usr/bin/python3 at: /home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/.metadata/.plugins/org.python.pydev/v1_eqo8on6m6qtijnz6835bycxw5
+!STACK 0
+java.lang.RuntimeException: Finished restoring information for: /usr/bin/python3 at: /home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/.metadata/.plugins/org.python.pydev/v1_eqo8on6m6qtijnz6835bycxw5
+	at org.python.pydev.core.log.Log.logInfo(Log.java:66)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.getInterpretersFromPersistedString(AbstractInterpreterManager.java:574)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.internalRecreateCacheGetInterpreterInfos(AbstractInterpreterManager.java:345)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.setInfos(AbstractInterpreterManager.java:655)
+	at org.python.pydev.ui.pythonpathconf.AbstractInterpreterPreferencesPage$5.run(AbstractInterpreterPreferencesPage.java:282)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-05-03 23:00:24.233
+!MESSAGE Info: Rebuilding internal caches: /home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/.metadata/.plugins/com.python.pydev.analysis/python_v1_eqo8on6m6qtijnz6835bycxw5/python.pydevsysteminfo (Expected error to be provided and got no error!)

@@ -1,0 +1,18 @@
+-- VERSION_4
+-- START DISKCACHE_2
+/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/BasicsPython/com.python.pydev.analysis/v2_indexcache
+BasicTestPackage.BasicTesting|1493830713000000000|/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/BasicsPython/BasicTestPackage/BasicTesting.py
+BasicTestPackage.__init__|1493537297000000000|/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/BasicsPython/BasicTestPackage/__init__.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=BasicTestPackage.BasicTesting
+-- END DICTIONARY
+-- START TREE 1
+2
+spa|1|spam!11@
+val|2|val!11@val3!11@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

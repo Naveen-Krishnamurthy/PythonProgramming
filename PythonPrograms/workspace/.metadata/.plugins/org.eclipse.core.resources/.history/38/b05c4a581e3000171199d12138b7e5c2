@@ -1,0 +1,17 @@
+'''
+Created on 30-Apr-2017
+
+@author: ubuser
+'''
+
+print("Addition "+repr(2+2))
+print("Sub "+repr(98-44))
+print("Floored Division "+repr(22//4))
+print("Division "+repr(22/4))
+print("Modules "+repr(22%4))
+print("Exponent "+repr(3**4))
+
+# Operator precedence
+print(repr(2+3*6))
+print(repr((2+3)*6))
+print(repr(48565878 * 578453))
