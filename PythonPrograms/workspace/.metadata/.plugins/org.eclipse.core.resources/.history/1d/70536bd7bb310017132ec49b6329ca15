@@ -1,0 +1,9 @@
+'''
+Created on 05-May-2017
+
+@author: ubuser
+'''
+
+
+print("This is new String")
+print('Strings can be represented using single quote')
