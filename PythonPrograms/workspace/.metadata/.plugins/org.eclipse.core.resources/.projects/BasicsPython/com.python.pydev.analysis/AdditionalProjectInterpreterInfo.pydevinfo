@@ -2,18 +2,45 @@
 -- START DISKCACHE_2
 /home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/BasicsPython/com.python.pydev.analysis/v2_indexcache
 BasicTestPackage.BasicTesting|1493830734000000000|/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/BasicsPython/BasicTestPackage/BasicTesting.py
+BasicTestPackage.JustifyDict|1494265153000000000|/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/BasicsPython/BasicTestPackage/JustifyDict.py
+BasicTestPackage.testAgePwd|1494263016000000000|/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/BasicsPython/BasicTestPackage/testAgePwd.py
 BasicTestPackage.__init__|1493537297000000000|/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/BasicsPython/BasicTestPackage/__init__.py
 BasicTestPackage.FirstPythonProgram|1493917557000000000|/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/BasicsPython/BasicTestPackage/FirstPythonProgram.py
+BasicTestPackage.StringJoinSplit|1494264103000000000|/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/BasicsPython/BasicTestPackage/StringJoinSplit.py
+BasicTestPackage.ListTest|1494267218000000000|/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/BasicsPython/BasicTestPackage/ListTest.py
+BasicTestPackage.ListTest2|1494267967000000000|/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/BasicsPython/BasicTestPackage/ListTest2.py
+BasicTestPackage.BasicStringTesting|1494262422000000000|/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/BasicsPython/BasicTestPackage/BasicStringTesting.py
+BasicTestPackage.SmartList|1494269144000000000|/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/BasicsPython/BasicTestPackage/SmartList.py
 -- END DISKCACHE
 -- START DICTIONARY
-2
-2=BasicTestPackage.BasicTesting
-1=BasicTestPackage.FirstPythonProgram
+9
+7=BasicTestPackage.BasicTesting
+4=BasicTestPackage.JustifyDict
+9=BasicTestPackage.testAgePwd
+6=BasicTestPackage.FirstPythonProgram
+2=BasicTestPackage.StringJoinSplit
+5=BasicTestPackage.ListTest
+8=BasicTestPackage.ListTest2
+1=BasicTestPackage.BasicStringTesting
+3=BasicTestPackage.SmartList
 -- END DICTIONARY
 -- START TREE 1
-2
-spa|2|spam!11@spam!19@
-val|2|val!19@val3!19@
+15
+alp|2|alphaValue!11@alphaNumValue!11@
+dec|1|decimalValue!11@
+joi|1|joinString!19@
+low|1|lowerCaseValue!11@
+mul|1|multilineString!11@
+myp|1|myPet!27@
+pic|1|picnicDict!35@
+pla|1|players!43@
+pri|1|printPicnic!34@
+spa|3|spam!51@spam!59@spam!67@
+spl|1|splitString!19@
+str|1|stringWithSpace!11@
+tes|4|testValue!75@testplayers!43@testPet!27@testList!67@
+upp|1|upperCaseValue!11@
+val|3|val!59@value!11@val3!59@
 -- END TREE
 -- START TREE 2
 0

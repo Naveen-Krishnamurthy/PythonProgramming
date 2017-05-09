@@ -1,0 +1,17 @@
+'''
+Created on 09-May-2017
+
+@author: ubuser
+'''
+from builtins import input
+
+myPet=[]
+
+while True :
+    print("Enter the pet "+str(len(myPet))+"(or enter nothing to stop ):")
+    testPet=input()
+    if testPet=='':
+        break
+    myPet=myPet+testPet
+    
+print(myPet)

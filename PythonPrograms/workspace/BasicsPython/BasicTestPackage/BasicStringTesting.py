@@ -56,6 +56,12 @@ print(lowerCaseValue)
 print("String variable 'upperCaseValue' is upper :"+repr(upperCaseValue.isupper()))
 print("String variable 'lowerCaseValue' is lower :"+repr(lowerCaseValue.islower()))
 
+alphaValue="WelcomeToPython!"
+alphaNumValue="WelcomeToPython!123456"
+decimalValue="123456789"
+stringWithSpace="Naveen/n"
+print("Alpha vlaue :"+repr(alphaNumValue.isalpha()))
+
 
 
 

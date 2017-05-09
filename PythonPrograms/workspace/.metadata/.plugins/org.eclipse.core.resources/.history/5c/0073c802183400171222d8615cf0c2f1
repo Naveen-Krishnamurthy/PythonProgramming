@@ -1,0 +1,10 @@
+'''
+Created on 08-May-2017
+
+@author: ubuser
+'''
+
+#List Values
+players=[10,16,11,17]
+print(players)
+print(players[2])

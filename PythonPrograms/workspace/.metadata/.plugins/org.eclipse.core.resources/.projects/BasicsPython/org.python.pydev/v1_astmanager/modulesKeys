@@ -1,4 +1,13 @@
 MODULES_MANAGER_V2
+BasicTestPackage.BasicStringTesting|/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/BasicsPython/BasicTestPackage/BasicStringTesting.py
 BasicTestPackage.BasicTesting|/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/BasicsPython/BasicTestPackage/BasicTesting.py
 BasicTestPackage.FirstPythonProgram|/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/BasicsPython/BasicTestPackage/FirstPythonProgram.py
+BasicTestPackage.JustifyDict|/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/BasicsPython/BasicTestPackage/JustifyDict.py
+BasicTestPackage.ListSorting|/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/BasicsPython/BasicTestPackage/ListSorting.py
+BasicTestPackage.ListTest|/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/BasicsPython/BasicTestPackage/ListTest.py
+BasicTestPackage.ListTest2|/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/BasicsPython/BasicTestPackage/ListTest2.py
+BasicTestPackage.SmartList|/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/BasicsPython/BasicTestPackage/SmartList.py
+BasicTestPackage.StringJoinSplit|/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/BasicsPython/BasicTestPackage/StringJoinSplit.py
+BasicTestPackage.TupleTest|/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/BasicsPython/BasicTestPackage/TupleTest.py
 BasicTestPackage.__init__|/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/BasicsPython/BasicTestPackage/__init__.py
+BasicTestPackage.testAgePwd|/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/BasicsPython/BasicTestPackage/testAgePwd.py

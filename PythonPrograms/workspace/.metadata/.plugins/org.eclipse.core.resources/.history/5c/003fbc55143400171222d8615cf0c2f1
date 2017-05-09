@@ -1,0 +1,9 @@
+'''
+Created on 08-May-2017
+
+@author: ubuser
+'''
+
+
+def printPicnic(itemDict,leftWidth,rightWidth): 
+    print("Print Picnic".center(leftWidth+rightWidth,'*'))

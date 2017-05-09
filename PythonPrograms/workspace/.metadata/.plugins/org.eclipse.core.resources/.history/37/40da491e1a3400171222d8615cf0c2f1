@@ -1,0 +1,9 @@
+'''
+Created on 08-May-2017
+
+@author: ubuser
+'''
+
+
+spam=['cat','bat','rat','elephant']
+print(spam[3])

@@ -1,0 +1,12 @@
+'''
+Created on 08-May-2017
+
+@author: ubuser
+'''
+
+while(True) :
+    print("Enter the age :")
+    testValue=input()
+    if(testValue.isdecimal()) :
+        break
+
