@@ -1,0 +1,85 @@
+'''
+Created on 10-May-2017
+
+@author: ubuser
+'''
+
+from ppprint import *
+
+birthday={
+    "Naveen":"10 Nov",
+    "Girish":"21st Feb",
+    "Sachin":"24th Apr"}
+
+pprint("Enter the name :")
+name=input()
+
+if name in birthday :
+    pprint("Found your birthday :"+birthday[name])
+else :
+    pprint("Enter your birthday :")
+    birthday[name]=input()
+    pprint("DB updated :"+repr(birthday))
+    
+    
+    
+
+pprint("Keys :"+repr(birthday.keys()))
+pprint("Values :"+repr(birthday.values()))
+pprint("Items :"+repr(birthday.items()))
+
+
+#  Iterating through keys , values & itmes using for loop
+for k in birthday.keys() :
+    pprint(k)
+
+pprint()
+
+for v in birthday.values() :
+    pprint(v)
+    
+pprint()
+for i in birthday.items() :
+    pprint(i)
+    
+# Converting the keys (), values(),items() return type to Expected list.  
+trueListForKeys=list(birthday.keys())
+pprint(trueListForKeys)
+trueListForValues=list(birthday.values())
+pprint(trueListForValues)
+trueListForItems=tuple(birthday.items())
+pprint(trueListForItems)
+
+
+# Membership operators used in Dict 
+pprint("Naveen" in birthday.keys())
+pprint("12" in birthday.values())
+pprint("Test" not in birthday.keys())
+
+
+#  Using GET method to find if the value exist for passed key
+pprint(birthday.get("Naveen1",None))
+
+
+#  Setdefault Method
+if 'Test' not in birthday :
+    birthday['Test']="26th Mar"
+pprint(birthday)
+birthday.setdefault("Naveen","10th November")
+birthday.setdefault("Arsenal","1983")
+pprint(birthday)
+
+
+
+#  SetDefault with well defined example
+
+pprint()
+message = 'IIIIIIIIIttNaveen'
+count={} #Empty dict
+
+for char in message :
+    count.setdefault(char,0)
+    count[char]=count[char]+1
+
+ppprint(count)
+

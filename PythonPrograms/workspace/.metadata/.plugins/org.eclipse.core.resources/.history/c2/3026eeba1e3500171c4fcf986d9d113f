@@ -1,0 +1,85 @@
+'''
+Created on 10-May-2017
+
+@author: ubuser
+'''
+
+birthday={
+    "Naveen":"10 Nov",
+    "Girish":"21st Feb",
+    "Sachin":"24th Apr"}
+
+print("Enter the name :")
+name=input()
+
+if name in birthday :
+    print("Found your birthday :"+birthday[name])
+else :
+    print("Enter your birthday :")
+    birthday[name]=input()
+    print("DB updated :"+repr(birthday))
+    
+    
+    
+
+print("Keys :"+repr(birthday.keys()))
+print("Values :"+repr(birthday.values()))
+print("Items :"+repr(birthday.items()))
+
+
+#  Iterating through keys , values & itmes using for loop
+for k in birthday.keys() :
+    print(k)
+
+print()
+
+for v in birthday.values() :
+    print(v)
+    
+print()
+for i in birthday.items() :
+    print(i)
+    
+# Converting the keys (), values(),items() return type to Expected list.  
+trueListForKeys=list(birthday.keys())
+print(trueListForKeys)
+trueListForValues=list(birthday.values())
+print(trueListForValues)
+trueListForItems=tuple(birthday.items())
+print(trueListForItems)
+
+
+# Membership operators used in Dict 
+print("Naveen" in birthday.keys())
+print("12" in birthday.values())
+print("Test" not in birthday.keys())
+
+
+#  Using GET method to find if the value exist for passed key
+print(birthday.get("Naveen1",None))
+
+
+#  Setdefault Method
+if 'Test' not in birthday :
+    birthday['Test']="26th Mar"
+print(birthday)
+birthday.setdefault("Naveen","10th November")
+birthday.setdefault("Arsenal","1983")
+print(birthday)
+
+
+
+#  SetDefault with well defined example
+
+print()
+message = 'It'
+count={} #Empty dict
+
+for char in message :
+    count.setdefault(char,0)
+    print(count)
+    print(count[char])
+    count[char]=count[char]+1
+    print(count[char]+1)
+
+

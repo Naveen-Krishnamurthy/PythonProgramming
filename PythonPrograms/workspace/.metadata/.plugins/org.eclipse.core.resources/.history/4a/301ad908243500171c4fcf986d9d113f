@@ -1,0 +1,12 @@
+'''
+Created on 10-May-2017
+
+@author: ubuser
+'''
+
+
+nestDic={
+    "Naveen":{'Black-Dog':3,'Blenderspide':2,'Henkinse':1},
+    "Sukesh":{'Teachers':2,'Blenderspide':1,'Black-Dog':1},
+    "Bhaskar":{'Black-Dog':4,'Blenderspide':2,'Teachers':3}
+    }

@@ -1,0 +1,40 @@
+'''
+Created on 10-May-2017
+
+@author: ubuser
+'''
+
+birthday={
+    "Naveen":"10 Nov",
+    "Girish":"21st Feb",
+    "Sachin":"24th Apr"}
+
+print("Enter the name :")
+name=input()
+
+if name in birthday :
+    print("Found your birthday :"+birthday[name])
+else :
+    print("Enter your birthday :")
+    birthday[name]=input()
+    print("DB updated :"+repr(birthday))
+    
+    
+    
+
+print("Keys :"+repr(birthday.keys()))
+print("Values :"+repr(birthday.values()))
+print("Items :"+repr(birthday.items()))
+
+
+for k in birthday.keys() :
+    print(i)
+
+print()
+
+for v in birthday.values() :
+    print(v)
+    
+print()
+for i in birthday.items() :
+    print(i)

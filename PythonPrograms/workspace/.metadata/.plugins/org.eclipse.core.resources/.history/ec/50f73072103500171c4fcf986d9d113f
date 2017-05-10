@@ -1,0 +1,13 @@
+'''
+Created on 10-May-2017
+
+@author: ubuser
+'''
+
+
+refList=[1,2,3,4,5,6]
+print(refList)
+spam=refList
+spam.append("NewValue")
+print(refList)
+print(spam)

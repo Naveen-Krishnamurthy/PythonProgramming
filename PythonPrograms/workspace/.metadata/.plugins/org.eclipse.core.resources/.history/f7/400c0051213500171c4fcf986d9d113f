@@ -1,0 +1,17 @@
+'''
+Created on 10-May-2017
+
+@author: ubuser
+'''
+
+ticTacToe={
+    'top-l':'',
+    'top-m':'',
+    'top-r':'',
+    'mid-l':'',
+    'mid-m':'',
+    'mid-r':'',
+    'low-l':'',
+    'low-m':'',
+    'low-r':''
+    }

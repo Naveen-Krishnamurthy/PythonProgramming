@@ -1,0 +1,18 @@
+'''
+Created on 10-May-2017
+
+@author: ubuser
+'''
+
+spam=42
+print(spam)
+chees=spam
+chees=100
+print(spam)
+print(chees)
+
+
+# Reference to list
+
+testList=[1,2,3,6]
+print(testList)
