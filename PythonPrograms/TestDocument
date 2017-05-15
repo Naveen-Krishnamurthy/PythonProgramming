@@ -1,0 +1,5 @@
+Hello World!, Welcome to Python Development
+Line 2 Reading the lines using readline()
+Line 3 Default mode of the file is "Reading"
+Line 4 close is the method should be used to close the file
+

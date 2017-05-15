@@ -1,0 +1,64 @@
+'''
+Created on 13-May-2017
+
+@author: ubuser
+'''
+
+
+from os import path,chdir, makedirs
+from posix import getcwd
+
+# This method will return the path based on OS that we are using, if we execute the same in Windows machine it will return the path according to Windows Machine
+ActualPath=path.join("user","xxx","Documents")
+print(ActualPath)
+
+
+'''
+/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace
+This will join the filenames in the list with the path that we have mentioned.
+'''
+
+fileName=["test.txt","Document.docx","pythonBasic.pdf"]
+for file in fileName :
+    AbsoluteFilePath=path.join('/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace',file)
+    print("Absolute path is :"+path.abspath(AbsoluteFilePath))
+    print(path.isabs(AbsoluteFilePath))
+    print("Relative path is :"+path.relpath(AbsoluteFilePath))
+    print(AbsoluteFilePath)
+
+
+# Current Working directory & change the working directory
+
+print("Before path change "+getcwd())
+# chdir("/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace")
+print("After path change :"+getcwd())
+
+# To Create thenew floder in current working directory
+#makedirs("testFolder")
+
+
+print("Checking absolute & relative path")
+print(path.abspath('.'))
+print(path.abspath('./testfolder'))
+print(path.isabs('.'))
+print(path.isabs(path.abspath('.')))
+
+
+print("Relative path")
+print(path.relpath('testfolder'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

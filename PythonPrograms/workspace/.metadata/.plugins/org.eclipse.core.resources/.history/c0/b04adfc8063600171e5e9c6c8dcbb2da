@@ -1,0 +1,11 @@
+'''
+Created on 11-May-2017
+
+@author: ubuser
+'''
+
+from re import compile
+
+phoneNumberregEx=compile(r'\d{3}-\d{3}-\d{4}')
+mo=phoneNumberregEx.search("My phone number is 123-456-7891")
+print("Found phone number :"+mo.group())

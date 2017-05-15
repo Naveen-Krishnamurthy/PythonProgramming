@@ -1,0 +1,34 @@
+'''
+Created on 11-May-2017
+
+@author: ubuser
+'''
+
+from re import compile
+
+def findPhoneNumber(message): 
+    phoneNumberregEx=compile(r'\d{3}-\d{3}-\d{4}') # Passing our desired pattern format
+    mo=phoneNumberregEx.search(message)
+#     print(mo)
+    if mo :
+        print("Found phone number :"+mo.group())
+    else :
+        print("No phone number found")
+    
+findPhoneNumber("My phone number is 123-456-7891")
+findPhoneNumber("Office phone number is 123-456-7891 and my phone number is 990-199-0541")
+findPhoneNumber("message")
+
+
+
+superHero=compile(r'Batman|Superman')
+matchedHero=superHero.search("I'm a SuperMan")
+print(matchedHero)
+# print(matchedHero.group())
+# matchedHero=superHero.search("I'm a Batman")
+# print(matchedHero.group())
+# matchedHero=superHero.search("'Batman' vs \"Superman\"")
+# print(matchedHero.group())
+
+
+

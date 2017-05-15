@@ -1,0 +1,11 @@
+'''
+Created on 11-May-2017
+
+@author: ubuser
+'''
+
+from re import compile
+
+chacterClass=compile(r'\d+\_\w+')
+matchedCharacterClass=chacterClass.findall("12_Tweleve 11 Eleven 10_Ten 9_Nine")
+print(matchedCharacterClass)

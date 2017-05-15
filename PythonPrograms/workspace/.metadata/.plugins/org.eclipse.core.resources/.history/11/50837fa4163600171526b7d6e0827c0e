@@ -1,0 +1,20 @@
+'''
+Created on 11-May-2017
+
+@author: ubuser
+'''
+
+from re import compile
+
+greedyPatternMatching=compile(r'(Ha){3,5}?')
+testMatchObject=greedyPatternMatching.search("Welcome to New HaHaHaHaHa Program")
+testMatchObjectTuple=greedyPatternMatching.findall("Welcome to New HaHaHaHaHa Program")
+if testMatchObject != None :
+    print(testMatchObject.group())
+else :
+    print("No match found")
+    
+if testMatchObjectTuple != None :
+    print(testMatchObjectTuple.group())
+else :
+    print("No Match found")

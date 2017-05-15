@@ -1,0 +1,19 @@
+'''
+Created on 11-May-2017
+
+@author: ubuser
+'''
+
+from re import compile
+
+greedyPatternMatching=compile(r'(Ha){3,5}?')
+testMatchObject=greedyPatternMatching.search("Welcome to New HaHaHaHaHa Program")
+if testMatchObject != None :
+    print(testMatchObject.group())
+else :
+    print("No match found")
+
+
+listOfMatches=compile(r'\d{3}-\d{3}-\d{4}')
+testMatchObjectList=listOfMatches.search("My phone number is 990-199-0541 and my office phone number is 123-456-7891")
+print(testMatchObjectList)

@@ -1,0 +1,12 @@
+'''
+Created on 11-May-2017
+
+@author: ubuser
+'''
+
+from re import compile
+
+matchingPattern=compile(r'\w{2,5}@(gmail|hotmail|yahoo).com')# Matching the email address
+testMailMatchObject=matchingPattern.search("This is valid emial address Naveen3665@hotmail.com")
+if testMailMatchObject != None :
+    print(testMailMatchObject.group())

@@ -1,0 +1,12 @@
+'''
+Created on 11-May-2017
+
+@author: ubuser
+'''
+
+#Method to check the valid phone number without using the regular expression in python
+
+def checkPhoneNumber(phNumber): 
+    if len(phNumber)!=12 :
+        return False
+    
