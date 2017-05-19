@@ -1,1 +1,11 @@
-DELSTRBasicTestPackage.ReadingAndWritingFiles
+INSTUPBasicTestPackage.LambdaFunctionTesting
+/home/ubuser/Documents/PythonProgramming/PythonPrograms/workspace/BasicsPython/BasicTestPackage/LambdaFunctionTesting.py
+INFOS:&&3|1|2|0&&3|3|2|0&&3|4|2|0&&3|5|2|0&&3|6|2|0&&3|7|2|0&&3|6|2|0&&3|7|2|0&&2|8|2|0
+add=3
+oddList=7
+square=1
+sub=4
+tstFun=8
+myList=5
+evenList=6
+BasicTestPackage.LambdaFunctionTesting=2

@@ -1,0 +1,14 @@
+'''
+Created on 19-May-2017
+
+@author: ubuser
+'''
+
+# Lambda function
+square=lambda x: x*x
+add = lambda x,y: x+y
+sub=lambda x,y : x-y
+
+print(square(2))
+print(add(2,3))
+print(sub(4,5))
